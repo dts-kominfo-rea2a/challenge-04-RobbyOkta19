@@ -9,16 +9,15 @@ const dates = [
 
 // TODO: Buatlah fungsi createDate
 const createDate = (dates, index) => {
-  let sortedDate = [];
+  let listDate = [];
   for (let i = 0; i < dates.length; i++) {
     const element = dates[i];
-    sortedDate.push(Date.parse(element) / 1000);
+    listDate.push(Date.parse(element) / 1000);
   }
-  sortedDate.sort();
   if (index != null) {
-    return sortedDate[index];
+    return listDate[index];
   } else {
-    return sortedDate.join("-");
+    return listDate.sort().join("-");
   }
 };
 
@@ -30,7 +29,7 @@ const createDate = (dates, index) => {
   console.log(createDate?.(dates));
 
   // '1614841200' (dalam string)
-  console.log(createDate?.(dates, 2));
+  console.log(createDate?.(dates, 3));
 })();
 
 module.exports = {
