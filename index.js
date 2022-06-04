@@ -15,7 +15,7 @@ const createDate = (dates, index) => {
     listDate.push(Date.parse(element) / 1000);
   }
   if (index != null) {
-    return listDate[index];
+    return listDate[index].toString();
   } else {
     return listDate.sort().join("-");
   }
